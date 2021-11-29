@@ -46,7 +46,8 @@
     "format:source": "prettier --config ./package.json --write './**/*.{js,ts}'",
     "format:yaml": "prettier --parser yaml --write './**/*.{yml,yaml}'",
     "lint": "eslint . -c ./.eslintrc.yml './**/*.{ts,tsx,js}'",
-    "prepublishOnly": "napi prepublish -t npm",
+    "prepare": "napi prepublish -t npm && yarn fix:package-name",
+    "fix:package-name": "sed -i -e 's#rstoml-#@rstoml/core-#g' package.json",
     "test": "ava",
     "version": "napi version"
   },
