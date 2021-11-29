@@ -1,5 +1,10 @@
 # rstoml
 
+<a href="https://www.npmjs.com/package/rstoml"><img src="https://img.shields.io/npm/v/rstoml.svg"></img></a>
+<a href="https://github.com/rainy-me/rstoml/actions/workflows/lint.yaml"><img src="https://github.com/rainy-me/rstoml/workflows/Lint/badge.svg"></img></a>
+<a href="https://github.com/rainy-me/rstoml/actions/workflows/CI.yaml"><img src="https://github.com/rainy-me/rstoml/workflows/CI/badge.svg"></img></a>
+
+
 [`toml-rs`](https://github.com/alexcrichton/toml-rs) re-exported via [`napi-rs`](https://github.com/napi-rs/napi-rs)
 
 
