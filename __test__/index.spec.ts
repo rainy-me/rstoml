@@ -1,14 +1,28 @@
 import test from 'ava'
 
-import { sleep, sync } from '../index'
+import { parse, parseBuffer, stringify } from '../index'
 
-test('sync function from native code', (t) => {
-  const fixture = 42
-  t.is(sync(fixture), fixture + 100)
+test('parse function from native code', (t) => {
+  t.snapshot(parse("foo = 'bar'"))
+  t.snapshot(
+    parse(`
+  ip = '127.0.0.1'
+
+  [keys]
+  github = 'xxxxxxxxxxxxxxxxx'
+  travis = 'yyyyyyyyyyyyyyyyy'
+  `),
+  )
 })
 
-test('sleep function from native code', async (t) => {
-  const timeToSleep = 200
-  const value = await sleep(timeToSleep)
-  t.is(value, timeToSleep * 2)
+test('parseBuffer function from native code', (t) => {
+  t.snapshot(parseBuffer(Buffer.from("foo = 'bar'", 'utf-8')))
+})
+
+test('stringify function from native code', (t) => {
+  t.snapshot(stringify({ foo: 'a\nb\nc' }))
+})
+
+test('stringify function from native code with pretty', (t) => {
+  t.snapshot(stringify({ foo: 'a\nb\nc' }, { pretty: true }))
 })

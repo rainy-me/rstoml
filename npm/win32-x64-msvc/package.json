@@ -1,12 +1,20 @@
 {
-  "name": "@napi-rs/package-template-win32-x64-msvc",
-  "version": "1.0.0",
-  "os": ["win32"],
-  "cpu": ["x64"],
-  "main": "package-template.win32-x64-msvc.node",
-  "files": ["package-template.win32-x64-msvc.node"],
+  "name": "@rstoml/core-win32-x64-msvc",
+  "version": "0.0.1",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "rstoml.win32-x64-msvc.node",
+  "files": [
+    "rstoml.win32-x64-msvc.node"
+  ],
   "description": "Template project for writing node package with napi-rs",
-  "keywords": ["napi-rs", "NAPI", "N-API", "Rust", "node-addon", "node-addon-api"],
+  "keywords": [
+    "toml"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">= 10"
@@ -15,5 +23,5 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "git@github.com:napi-rs/package-template.git"
+  "repository": "git@github.com:rainy-me/rstoml.git"
 }
