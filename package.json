@@ -1,7 +1,7 @@
 {
   "name": "rstoml",
   "version": "0.0.1",
-  "description": "Template project for writing node package with napi-rs",
+  "description": "little native toml library va napi.rs",
   "main": "index.js",
   "repository": "git@github.com:rainy-me/rstoml.git",
   "license": "MIT",

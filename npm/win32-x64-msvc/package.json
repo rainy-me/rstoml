@@ -11,7 +11,7 @@
   "files": [
     "rstoml.win32-x64-msvc.node"
   ],
-  "description": "Template project for writing node package with napi-rs",
+  "description": "little native toml library va napi.rs",
   "keywords": [
     "toml"
   ],

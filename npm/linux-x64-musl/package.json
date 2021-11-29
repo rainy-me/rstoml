@@ -11,7 +11,7 @@
   "files": [
     "rstoml.linux-x64-musl.node"
   ],
-  "description": "Template project for writing node package with napi-rs",
+  "description": "little native toml library va napi.rs",
   "keywords": [
     "toml"
   ],
