@@ -7,6 +7,7 @@
 
 [`toml-rs`](https://github.com/alexcrichton/toml-rs) re-exported via [`napi-rs`](https://github.com/napi-rs/napi-rs)
 
+**⚠️NOTE**: datetime type is not supported for now. See [napi-rs#features-table](https://github.com/napi-rs/napi-rs#features-table)
 
 ## Install
 
