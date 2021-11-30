@@ -1,28 +1,29 @@
-// import b from 'benny'
+import fs from 'fs/promises'
+import path from 'path'
 
-// import { sync } from '../index'
+import b from 'benny'
 
-// function add(a: number) {
-//   return a + 100
-// }
+import toml from '../index'
 
-// async function run() {
-//   await b.suite(
-//     'Add 100',
+async function run() {
+  const file = path.join(__dirname, '../.cache/toml-rs/test-suite/tests/valid/example-v0.4.0.toml')
+  const content = await fs.readFile(file, 'utf-8')
+  await b.suite(
+    file,
 
-//     b.add('Native a + 100', () => {
-//       sync(10)
-//     }),
+    b.add('parseBuffer', () => {
+      toml.parseBuffer(Buffer.from(content))
+    }),
 
-//     b.add('JavaScript a + 100', () => {
-//       add(10)
-//     }),
+    b.add('toml parse', () => {
+      toml.parse(content)
+    }),
 
-//     b.cycle(),
-//     b.complete(),
-//   )
-// }
+    b.cycle(),
+    b.complete(),
+  )
+}
 
-// run().catch((e) => {
-//   console.error(e)
-// })
+run().catch((e) => {
+  console.error(e)
+})
