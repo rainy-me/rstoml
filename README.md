@@ -55,7 +55,7 @@ toml.stringify({ foo: 'a\nb\nc' }, { pretty: true })
 
 ## Benchmark
 
-Not available now. As all I want for now is a stable toml lib.
+you can find a benchmark at this moment [here](https://github.com/lab-yue/iarna-toml/blob/latest/BENCHMARK.md)
 
 ## why
 
