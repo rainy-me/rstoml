@@ -7,8 +7,6 @@
 
 [`toml-rs`](https://github.com/alexcrichton/toml-rs) re-exported via [`napi-rs`](https://github.com/napi-rs/napi-rs)
 
-**⚠️NOTE**: datetime type is not supported for now. See [napi-rs#features-table](https://github.com/napi-rs/napi-rs#features-table)
-
 ## Install
 
 - `pnpm add rstoml`
@@ -57,7 +55,3 @@ toml.stringify({ foo: 'a\nb\nc' }, { pretty: true })
 ## Benchmark
 
 you can find a benchmark at this moment [here](https://github.com/lab-yue/iarna-toml/blob/latest/BENCHMARK.md)
-
-## why
-
-I can't found a maintained node toml library.
